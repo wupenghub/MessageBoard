@@ -39,7 +39,9 @@
 </div>
 <div class="comments container">
     <ul class="list-group">
-        <li class="list-group-item"><span class="pull-right"></span></li>
+        {{each comments}}
+            <li class="list-group-item">评论人{{$value.name}}说：{{$value.content}}<span class="pull-right">时间：{{$value.date}}</span></li>
+        {{/each}}
     </ul>
 </div>
 </body>
